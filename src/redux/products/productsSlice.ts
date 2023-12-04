@@ -78,12 +78,12 @@ export const fetchProducts = () => {
   };
 };
 
-export const fetchLatestTime = async () => {
+export const fetchLatestTime = async (time: string) => {
   try {
     const response: ProductItemProps[] = await api.get("/products", {
       params: {
         _sort: "time",
-        _order: "desc",
+        _order: time,
         _limit: 1,
       },
     });
@@ -104,7 +104,7 @@ export const searchProducts = ({ price, theme, time, tier }: SearchParams) => {
     try {
       let timeToSearch = time;
       if (time) {
-        const latestTime = await fetchLatestTime();
+        const latestTime = await fetchLatestTime(time);
         timeToSearch = latestTime?.time;
       }
 
@@ -113,7 +113,6 @@ export const searchProducts = ({ price, theme, time, tier }: SearchParams) => {
         time: timeToSearch,
         tier: tier,
       };
-
       if (price) {
         params._sort = "price";
         params._order = price === "lowToHigh" ? "asc" : "desc";

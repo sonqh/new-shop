@@ -3,7 +3,7 @@ import close from "@/assets/images/close.png";
 import { PRICE_ITEMS, THEME_ITEMS, TIME_ITEMS } from "@/constant/contants";
 import { fetchCategories } from "@/redux/category/categorySlice";
 import { setFilter } from "@/redux/filters/filterSlice";
-import { SearchParams, searchProducts } from "@/redux/products/productsSlice";
+import { SearchParams } from "@/redux/products/productsSlice";
 import { DropdownFilter } from "@/widgets/DropdownFilter";
 import { Flex, Form, Slider } from "antd";
 import { omitBy } from "lodash";
@@ -74,7 +74,6 @@ const LeftContent: FC = () => {
 
   const handleSearch = useCallback(() => {
     const truthyFilters = omitBy(filters, (item) => !item);
-    dispatch(searchProducts(truthyFilters));
     dispatch(setFilter(truthyFilters));
   }, [filters, dispatch]);
 
