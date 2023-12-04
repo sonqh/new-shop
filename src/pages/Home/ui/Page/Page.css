@@ -1,0 +1,50 @@
+/* Custom CSS */
+.ant-tooltip.ant-slider-tooltip .ant-tooltip-inner {
+  background-color: #d53f8c;
+  color: white;
+}
+.ant-tooltip.ant-slider-tooltip .ant-tooltip-arrow::after {
+  border-top-color: #d53f8c;
+}
+
+.ant-tooltip-arrow-content {
+  background-color: #fafafa !important;
+}
+:where(.css-dev-only-do-not-override-5i9dy8).ant-tooltip {
+  --antd-arrow-background-color: #d53f8c;
+}
+
+.ant-slider-mark-text {
+  width: 80%;
+  color: #d53f8c !important;
+  white-space: nowrap;
+}
+.ant-slider-mark .ant-slider-mark-text:first-child {
+  transform: translateX(-43%) !important;
+}
+
+.ant-slider-mark .ant-slider-mark-text:last-child {
+  transform: translateX(-63%) !important;
+}
+
+.filter-label {
+  color: #89888b;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.overlapping-img {
+  position: relative;
+  width: 90%;
+  margin: 10px;
+}
+
+.image-overlay {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(calc(30% - 1.35rem));
+}

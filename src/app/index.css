@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url("@assets/images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* @font-face {
+  font-family: "Drone Ranger Pro";
+  src: url("../fonts/drone-ranger-pro-font.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Drone Ranger Pro", sans-serif;
+} */

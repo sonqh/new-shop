@@ -1,0 +1,52 @@
+.image-item {
+  background-color: #3a3841;
+}
+
+.image-item .item-picture {
+  padding: 10px;
+}
+
+.item-info {
+  padding: 0 10px;
+}
+
+.overlapping-img {
+  position: relative;
+  width: 90%;
+  margin: 10px;
+}
+
+.image-overlay {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(calc(30% - 1.35rem));
+}
+
+.item-description {
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 1350px) {
+  .image-overlay {
+    transform: translateY(calc(30% - 1rem));
+  }
+}
+
+@media (max-width: 1024px) {
+  .image-overlay {
+    transform: translateY(calc(35% - 1.25rem));
+  }
+}
+
+@media (max-width: 768px) {
+  .image-overlay {
+    transform: translateY(calc(25% - 1.25rem));
+  }
+}
+
+@media (max-width: 640px) {
+  .image-overlay {
+    transform: translateY(calc(10% - 1.25rem));
+  }
+}
